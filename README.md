@@ -10,9 +10,9 @@ Welcome to our Stock Market Prediction Website! This platform utilizes a Recurre
 
 ## How to Install
 1. Clone the repository: 
-git clone 
+git clone https://github.com/Tammy123tam/Stock_Prediction.git
 2. Navigate to the project directory: 
-cd <projetc directory>
+cd Stock_Prediction
 3. Install the required dependencies:
 pip install -r requirements.txt
   
