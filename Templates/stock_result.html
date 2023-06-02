@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Stock Market Prediction</title>
+  </head>
+  <body>
+    <header class="header">
+        <h1 style="color: #5e64a0; font-size: 36px;">Stock Market Prediction</h1>
+        <p style="font-size: 18px;">Welcome to our Stock Price Prediction Website! This platform utilizes a Recurrent Neural Network with LSTM to forecast US stock market prices.</p>
+    </header>
+
+    {% block body %}
+    {% if error_message %}
+        <div class="container mt-5">
+            <div class="alert alert-danger" role="alert">
+                {{ error_message }}
+            </div>
+        </div>
+    {% else %}
+        <div class="container mt-5">
+            <h2>Stock Details</h2>
+            <ul>
+                <li><strong>Stock Name:</strong> {{ stock_detail[0] }}</li>
+                <li><strong>Epochs:</strong> {{ stock_detail[1] }}</li>
+                <li><strong>Ahead:</strong> {{ stock_detail[2] }}</li>
+                <li><strong>Days:</strong> {{ stock_detail[3] }}</li>
+            </ul>
+
+            <h2>Stock Price Prediction</h2>
+            <img src="Stocks/save/{{ stock_detail[0] }}.png" alt="Graph of {{ stock_detail[0] }}"> -->
+
+            <h2>Predicted Stock Price</h2>
+            <p>{{ stock_price }}</p>
+        </div>
+    {% endif %}
+    {% endblock %}
+
+  </body>
+</html>

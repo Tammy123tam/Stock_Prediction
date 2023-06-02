@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Stock Market Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    
+    <header class="header">
+        <h1 style="color: #5e64a0; font-size: 36px;">Stock Market Prediction</h1>
+        <p style="font-size: 18px;">Welcome to our Stock Price Prediction Website! This platform utilizes a Recurrent Neural Network with LSTM to forecast US stock market prices.</p>
+      </header>
+
+    <h2 style="color: #2e6c80;">Please enter the following information:</h2>
+    <ul style="list-style-type: square;">
+    <li>Stock Name: Enter the capitalized letters for the stock. For example, "AAPL" for Apple, "BTC-USD" for Bitcoin, "TSLA" for Tesla.</li>
+    <li>Epochs: Set the number of passes of the entire training dataset. Higher epochs can improve accuracy. A value of 50 is recommended for good performance. </li>
+    <li>Ahead: Specify the number of days you want to predict ahead of time. A lower value in "Ahead" generally results in higher accuracy because the model may struggle to predict further into the future.</li>
+    <li>Days: Choose the number of days you want to use as the prediction dataset to forecast the future. </li>
+    </ul>
+    <p>&nbsp;</p>
+    <form action="/data" method="POST">
+        <p>Stock Name:  <input name="stock_name" id="stock_name" type="text"  ></p>
+        <p>Epochs:   <input type="number" name="Epochs" /></p>
+        <p>Ahead:   <input type="number" name="Ahead" /></p>
+        <p>Days:   <input type="number" name="Days" /></p>
+        <p><input type="submit" value="Submit" /></p>
+    </form>
+   
+
+</html>
